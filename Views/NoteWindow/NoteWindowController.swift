@@ -88,30 +88,33 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         // Prevent windowDidResize from interfering
         isHandlingCollapseChange = true
 
+        let targetFrame: NSRect
         if isCollapsed {
             // Save current height before collapsing
             expandedHeight = currentFrame.height
-
-            // Collapse to just the handle
-            let collapsedFrame = NSRect(
+            targetFrame = NSRect(
                 x: currentFrame.origin.x,
                 y: currentFrame.maxY - handleHeight,
                 width: currentFrame.width,
                 height: handleHeight
             )
-            panel.setFrame(collapsedFrame, display: true)
         } else {
-            // Expand back to saved height
-            let expandedFrame = NSRect(
+            targetFrame = NSRect(
                 x: currentFrame.origin.x,
                 y: currentFrame.maxY - expandedHeight,
                 width: currentFrame.width,
                 height: expandedHeight
             )
-            panel.setFrame(expandedFrame, display: true)
         }
 
-        isHandlingCollapseChange = false
+        // Smooth 200ms animation
+        NSAnimationContext.runAnimationGroup({ context in
+            context.duration = 0.2
+            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            panel.animator().setFrame(targetFrame, display: true)
+        }, completionHandler: { [weak self] in
+            self?.isHandlingCollapseChange = false
+        })
     }
 
     private func updateFloatingLevel() {

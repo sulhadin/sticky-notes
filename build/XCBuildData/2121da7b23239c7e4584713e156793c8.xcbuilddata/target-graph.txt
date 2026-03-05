@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'StickyNote-iOS' in project 'StickyNote' (no dependencies)

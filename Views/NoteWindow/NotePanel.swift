@@ -58,6 +58,42 @@ final class NotePanel: NSPanel {
         return false
     }
 
+    override func keyDown(with event: NSEvent) {
+        let flags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
+
+        if flags == .command {
+            switch event.charactersIgnoringModifiers {
+            case "w":
+                // Cmd+W: close window
+                close()
+                return
+            case "f":
+                // Cmd+F: find in note - forward to text view
+                if let textView = findTextView(in: contentView) {
+                    textView.performTextFinderAction(NSTextFinder.Action.showFindInterface)
+                }
+                return
+            default:
+                break
+            }
+        }
+
+        super.keyDown(with: event)
+    }
+
+    private func findTextView(in view: NSView?) -> NSTextView? {
+        guard let view = view else { return nil }
+        if let textView = view as? NSTextView {
+            return textView
+        }
+        for subview in view.subviews {
+            if let found = findTextView(in: subview) {
+                return found
+            }
+        }
+        return nil
+    }
+
     // Center the window on the main screen
     func centerOnScreen() {
         guard let screen = NSScreen.main else { return }

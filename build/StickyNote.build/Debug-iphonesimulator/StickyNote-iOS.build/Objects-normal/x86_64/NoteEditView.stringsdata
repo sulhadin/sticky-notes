@@ -1,0 +1,64 @@
+{
+  "source": "/Users/sulhadin/Repository/sticky-notes/iOS/NoteEditView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Color",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Text Size",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unpin",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pin to Top",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete Note",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld pt",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 81
+        }
+      }
+    ]
+  },
+  "version": 1
+}

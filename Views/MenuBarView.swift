@@ -90,28 +90,51 @@ struct MenuBarView: View {
     }
 
     private var quitSection: some View {
-        Button {
-            store.forceSave()
-            NSApplication.shared.terminate(nil)
-        } label: {
-            HStack {
-                Image(systemName: "power")
-                Text("Quit StickyNote")
-                Spacer()
-                Text("Q")
-                    .foregroundColor(.secondary)
-                    .font(.caption)
+        VStack(spacing: 2) {
+            Button {
+                showSettings()
+            } label: {
+                HStack {
+                    Image(systemName: "gearshape")
+                    Text("Settings...")
+                    Spacer()
+                    Text(",")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                }
             }
+            .keyboardShortcut(",", modifiers: .command)
+            .buttonStyle(.plain)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+
+            Button {
+                store.forceSave()
+                NSApplication.shared.terminate(nil)
+            } label: {
+                HStack {
+                    Image(systemName: "power")
+                    Text("Quit Sticky Markdown")
+                    Spacer()
+                    Text("Q")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                }
+            }
+            .keyboardShortcut("q", modifiers: .command)
+            .buttonStyle(.plain)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
         }
-        .keyboardShortcut("q", modifiers: .command)
-        .buttonStyle(.plain)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
+    }
+
+    private func showSettings() {
+        SettingsWindowController.shared.showSettings()
     }
 }
 
 struct NoteListItem: View {
-    let note: StickyNote
+    let note: Note
     let onTap: () -> Void
 
     @Environment(\.colorScheme) private var colorScheme

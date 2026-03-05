@@ -1,0 +1,119 @@
+{
+  "" : {
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote-iOS-primary.dia",
+    "emit-module-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote-iOS-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote-iOS-primary-emit-module.dia",
+    "pch" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote-iOS-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote-iOS-primary.swiftdeps"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/Extensions/Color+NoteColors.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/Color+NoteColors~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/Helpers/PersistenceManager.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/PersistenceManager~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/Models/NoteColor.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteColor~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/Models/NoteStore.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteStore~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/Models/StickyNote.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNote~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/iOS/NoteCardView.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteCardView~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/iOS/NoteEditView.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteEditView~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/iOS/NoteGridView.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/NoteGridView~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/iOS/StickyNoteApp_iOS.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/StickyNoteApp_iOS~partial.swiftmodule"
+  },
+  "/Users/sulhadin/Repository/sticky-notes/iOS/iOS_SettingsView.swift" : {
+    "const-values" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.d",
+    "diagnostics" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.dia",
+    "index-unit-output-path" : "/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.o",
+    "llvm-bc" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.bc",
+    "object" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.o",
+    "swift-dependencies" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/sulhadin/Repository/sticky-notes/build/StickyNote.build/Debug-iphonesimulator/StickyNote-iOS.build/Objects-normal/x86_64/iOS_SettingsView~partial.swiftmodule"
+  }
+}

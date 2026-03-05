@@ -1,0 +1,16 @@
+{
+  "source": "/Users/sulhadin/Repository/sticky-notes/iOS/NoteCardView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Empty Note",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 21
+        }
+      }
+    ]
+  },
+  "version": 1
+}

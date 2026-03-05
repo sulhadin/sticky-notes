@@ -1,0 +1,64 @@
+{
+  "source": "/Users/sulhadin/Repository/sticky-notes/iOS/NoteGridView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Sticky Notes",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "Unpin",
+        "location": {
+          "startingColumn": 60,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pin to Top",
+        "location": {
+          "startingColumn": 70,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 44,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Color",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Notes Yet",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tap + to create your first sticky note",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 79
+        }
+      }
+    ]
+  },
+  "version": 1
+}

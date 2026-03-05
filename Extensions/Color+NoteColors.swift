@@ -1,4 +1,10 @@
 import SwiftUI
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
+import UIKit
+#endif
 
 extension Color {
     init(hex: String) {
@@ -27,7 +33,15 @@ extension Color {
         )
     }
 
+    #if canImport(AppKit)
     var nsColor: NSColor {
         NSColor(self)
     }
+    #endif
+
+    #if canImport(UIKit)
+    var uiColor: UIColor {
+        UIColor(self)
+    }
+    #endif
 }

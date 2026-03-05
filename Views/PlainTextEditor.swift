@@ -43,6 +43,10 @@ struct PlainTextEditor: NSViewRepresentable {
         textView.isContinuousSpellCheckingEnabled = false
         textView.isGrammarCheckingEnabled = false
 
+        // Enable find bar
+        textView.usesFindBar = true
+        textView.isIncrementalSearchingEnabled = true
+
         textView.minSize = NSSize(width: 0, height: 0)
         textView.maxSize = NSSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
         textView.isVerticallyResizable = true
@@ -101,6 +105,15 @@ struct PlainTextEditor: NSViewRepresentable {
 }
 
 final class PlainTextView: NSTextView {
+
+    // Enable find bar support
+    override func validateUserInterfaceItem(_ item: any NSValidatedUserInterfaceItem) -> Bool {
+        if let action = item.action,
+           action == #selector(performTextFinderAction(_:)) {
+            return true
+        }
+        return super.validateUserInterfaceItem(item)
+    }
 
     // Only restrict what we READ from pasteboard (paste), not what we WRITE (copy)
     override var readablePasteboardTypes: [NSPasteboard.PasteboardType] {

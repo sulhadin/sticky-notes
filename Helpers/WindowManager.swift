@@ -68,7 +68,31 @@ final class WindowManager {
 
     func restoreWindows() {
         for note in store.notes {
+            // Validate window position is on a connected screen
+            validateAndFixFrame(for: note.id)
             openWindow(for: note.id, isNewNote: false)
+        }
+    }
+
+    private func validateAndFixFrame(for noteId: UUID) {
+        guard let note = store.note(for: noteId) else { return }
+        let frame = note.windowFrame
+
+        // Check if the note's frame overlaps with any connected screen
+        let screens = NSScreen.screens
+        let isOnScreen = screens.contains { screen in
+            screen.visibleFrame.intersects(frame)
+        }
+
+        if !isOnScreen, let mainScreen = NSScreen.main {
+            // Move to center of main screen
+            let screenFrame = mainScreen.visibleFrame
+            let newOrigin = CGPoint(
+                x: screenFrame.midX - frame.width / 2,
+                y: screenFrame.midY - frame.height / 2
+            )
+            let fixedFrame = CGRect(origin: newOrigin, size: frame.size)
+            store.updateFrame(for: noteId, frame: fixedFrame)
         }
     }
 
