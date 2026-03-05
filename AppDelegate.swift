@@ -29,9 +29,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if !flag {
-            // Show all notes when clicking dock icon (if visible)
+            // Show Notes Manager when clicking dock icon
             Task { @MainActor in
-                windowManager.showAllNotes()
+                NotesManagerWindowController.shared.showManager()
             }
         }
         return true

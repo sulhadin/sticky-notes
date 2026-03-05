@@ -62,6 +62,23 @@ struct MenuBarView: View {
     private var actionsSection: some View {
         VStack(spacing: 2) {
             Button {
+                NotesManagerWindowController.shared.showManager()
+            } label: {
+                HStack {
+                    Image(systemName: "square.grid.2x2")
+                    Text("Notes Manager")
+                    Spacer()
+                    Text("M")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                }
+            }
+            .keyboardShortcut("m", modifiers: [.command, .shift])
+            .buttonStyle(.plain)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+
+            Button {
                 WindowManager.shared.showAllNotes()
             } label: {
                 HStack {

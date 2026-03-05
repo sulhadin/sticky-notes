@@ -42,6 +42,9 @@
 		C1000012226AAAAA /* CDNote+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000002226AAAA1 /* CDNote+Mapping.swift */; };
 		C1000013226AAAAA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000003226AAAA1 /* CoreDataStack.swift */; };
 		C1000014226AAAAA /* MigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000004226AAAA1 /* MigrationManager.swift */; };
+		D1000001226AAAAA /* ManagerNoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000001226AAAA1 /* ManagerNoteCardView.swift */; };
+		D1000002226AAAAA /* NotesManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000002226AAAA1 /* NotesManagerView.swift */; };
+		D1000003226AAAAA /* NotesManagerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000003226AAAA1 /* NotesManagerWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		C1000003226AAAA1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C1000004226AAAA1 /* MigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationManager.swift; sourceTree = "<group>"; };
 		C1000005226AAAA1 /* StickyMarkdown-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "StickyMarkdown-iOS.entitlements"; sourceTree = "<group>"; };
+		D1000001226AAAA1 /* ManagerNoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerNoteCardView.swift; sourceTree = "<group>"; };
+		D1000002226AAAA1 /* NotesManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManagerView.swift; sourceTree = "<group>"; };
+		D1000003226AAAA1 /* NotesManagerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManagerWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 				A1000018226AAAA1 /* WindowDragView.swift */,
 				A1000019226AAAA1 /* VisualEffectView.swift */,
 				A1000000226AAAC7 /* NoteWindow */,
+				D1000000226AAAC0 /* NotesManager */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +204,16 @@
 				C1000005226AAAA1 /* StickyMarkdown-iOS.entitlements */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		D1000000226AAAC0 /* NotesManager */ = {
+			isa = PBXGroup;
+			children = (
+				D1000001226AAAA1 /* ManagerNoteCardView.swift */,
+				D1000002226AAAA1 /* NotesManagerView.swift */,
+				D1000003226AAAA1 /* NotesManagerWindowController.swift */,
+			);
+			path = NotesManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +334,9 @@
 				A1000019226AAAAA /* VisualEffectView.swift in Sources */,
 				A1000020226AAAAA /* NoteTitleBar.swift in Sources */,
 				A1000021226AAAAA /* SettingsView.swift in Sources */,
+				D1000001226AAAAA /* ManagerNoteCardView.swift in Sources */,
+				D1000002226AAAAA /* NotesManagerView.swift in Sources */,
+				D1000003226AAAAA /* NotesManagerWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +371,7 @@
 				CODE_SIGN_ENTITLEMENTS = StickyMarkdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -380,7 +400,7 @@
 				CODE_SIGN_ENTITLEMENTS = StickyMarkdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -527,12 +547,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "iOS/StickyMarkdown-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "iOS/Info-iOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Sticky Markdown";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -544,7 +564,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sulhadin.sticky-markdown.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sulhadin.sticky-markdown";
 				PRODUCT_NAME = "Sticky Markdown";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -563,12 +583,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "iOS/StickyMarkdown-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "iOS/Info-iOS.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Sticky Markdown";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,7 +600,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sulhadin.sticky-markdown.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sulhadin.sticky-markdown";
 				PRODUCT_NAME = "Sticky Markdown";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

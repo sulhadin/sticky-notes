@@ -1,0 +1,51 @@
+Privacy Policy for Sticky Markdown
+
+Last updated: March 5, 2026
+
+1. Introduction
+
+Sticky Markdown ("the App") is developed by Sulhadin Oney. This Privacy Policy explains how we handle your information when you use the App on macOS and iOS.
+
+2. Data Collection
+
+Sticky Markdown does NOT collect, store, or transmit any personal data to external servers. All your notes and preferences are stored locally on your device and synced through Apple's iCloud service.
+
+3. iCloud Sync
+
+The App uses Apple's CloudKit framework to sync your notes across your devices. This data is stored in your personal iCloud account and is governed by Apple's Privacy Policy (https://www.apple.com/legal/privacy/). We do not have access to your iCloud data.
+
+4. Data Stored
+
+The following data is stored locally and in your iCloud account:
+- Note content (text you write)
+- Note preferences (color, font size, window position, pin status)
+- App settings (default font, opacity, launch at login preference)
+
+5. Third-Party Services
+
+Sticky Markdown does not use any third-party analytics, advertising, or tracking services. The only external service used is Apple's iCloud/CloudKit for data synchronization.
+
+6. Data Sharing
+
+We do not sell, trade, or transfer your data to any third parties. Your notes remain entirely under your control.
+
+7. Data Retention
+
+Your data persists on your device and in your iCloud account until you delete it. Uninstalling the App removes local data. iCloud data can be managed through your device's iCloud settings.
+
+8. Children's Privacy
+
+Sticky Markdown does not knowingly collect any information from children under the age of 13.
+
+9. Security
+
+Your data is protected by Apple's built-in security measures, including HTTPS/TLS encryption for iCloud sync. We do not implement any additional custom encryption.
+
+10. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last updated" date above.
+
+11. Contact
+
+If you have questions about this Privacy Policy, please contact:
+Email: sulhadin@gmail.com
