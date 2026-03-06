@@ -18,7 +18,8 @@ extension CDNote {
                 height: windowFrameHeight
             ),
             createdAt: createdAt ?? Date(),
-            modifiedAt: modifiedAt ?? Date()
+            modifiedAt: modifiedAt ?? Date(),
+            sortOrder: Int(sortOrder)
         )
     }
 
@@ -35,5 +36,6 @@ extension CDNote {
         windowFrameHeight = note.windowFrame.size.height
         createdAt = note.createdAt
         modifiedAt = note.modifiedAt
+        sortOrder = Int32(note.sortOrder)
     }
 }

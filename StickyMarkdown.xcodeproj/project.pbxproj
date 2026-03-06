@@ -45,6 +45,11 @@
 		D1000001226AAAAA /* ManagerNoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000001226AAAA1 /* ManagerNoteCardView.swift */; };
 		D1000002226AAAAA /* NotesManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000002226AAAA1 /* NotesManagerView.swift */; };
 		D1000003226AAAAA /* NotesManagerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000003226AAAA1 /* NotesManagerWindowController.swift */; };
+		E1000001226AAAAA /* MarkdownStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000001226AAAA1 /* MarkdownStyler.swift */; };
+		E1000002226AAAAA /* NoteExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002226AAAA1 /* NoteExporter.swift */; };
+		E1000003226AAAAA /* MarkdownTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000003226AAAA1 /* MarkdownTextEditor.swift */; };
+		F1000001226AAAAA /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = F1000002226AAAA1 /* Markdown */; };
+		F1000002226AAAAA /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = F1000003226AAAA1 /* Markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +88,9 @@
 		D1000001226AAAA1 /* ManagerNoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerNoteCardView.swift; sourceTree = "<group>"; };
 		D1000002226AAAA1 /* NotesManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManagerView.swift; sourceTree = "<group>"; };
 		D1000003226AAAA1 /* NotesManagerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManagerWindowController.swift; sourceTree = "<group>"; };
+		E1000001226AAAA1 /* MarkdownStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStyler.swift; sourceTree = "<group>"; };
+		E1000002226AAAA1 /* NoteExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteExporter.swift; sourceTree = "<group>"; };
+		E1000003226AAAA1 /* MarkdownTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1000001226AAAAA /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1000002226AAAAA /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +181,8 @@
 				C1000003226AAAA1 /* CoreDataStack.swift */,
 				C1000004226AAAA1 /* MigrationManager.swift */,
 				A1000013226AAAA1 /* WindowManager.swift */,
+				E1000001226AAAA1 /* MarkdownStyler.swift */,
+				E1000002226AAAA1 /* NoteExporter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 				B1000003226AAAA1 /* NoteCardView.swift */,
 				B1000004226AAAA1 /* NoteEditView.swift */,
 				B1000005226AAAA1 /* iOS_SettingsView.swift */,
+				E1000003226AAAA1 /* MarkdownTextEditor.swift */,
 				B1000006226AAAA1 /* Info-iOS.plist */,
 				C1000005226AAAA1 /* StickyMarkdown-iOS.entitlements */,
 			);
@@ -232,6 +245,9 @@
 			dependencies = (
 			);
 			name = StickyMarkdown;
+			packageProductDependencies = (
+				F1000002226AAAA1 /* Markdown */,
+			);
 			productName = StickyMarkdown;
 			productReference = A1000000226AAAA0 /* StickyMarkdown.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +265,9 @@
 			dependencies = (
 			);
 			name = "StickyMarkdown-iOS";
+			packageProductDependencies = (
+				F1000003226AAAA1 /* Markdown */,
+			);
 			productName = "StickyMarkdown-iOS";
 			productReference = B1000000226AAAA0 /* Sticky Markdown.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +299,9 @@
 				Base,
 			);
 			mainGroup = A1000000226AAAC0;
+			packageReferences = (
+				F1000001226AAAA1 /* XCRemoteSwiftPackageReference "swift-markdown" */,
+			);
 			productRefGroup = A1000000226AAAC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,6 +359,8 @@
 				D1000001226AAAAA /* ManagerNoteCardView.swift in Sources */,
 				D1000002226AAAAA /* NotesManagerView.swift in Sources */,
 				D1000003226AAAAA /* NotesManagerWindowController.swift in Sources */,
+				E1000001226AAAAA /* MarkdownStyler.swift in Sources */,
+				E1000002226AAAAA /* NoteExporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +381,7 @@
 				C1000013226AAAAA /* CoreDataStack.swift in Sources */,
 				C1000014226AAAAA /* MigrationManager.swift in Sources */,
 				B1000014226AAAAA /* Color+NoteColors.swift in Sources */,
+				E1000003226AAAAA /* MarkdownTextEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +667,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1000001226AAAA1 /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftlang/swift-markdown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1000002226AAAA1 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1000001226AAAA1 /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
+		};
+		F1000003226AAAA1 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1000001226AAAA1 /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1000000226AAAF0 /* Project object */;
 }

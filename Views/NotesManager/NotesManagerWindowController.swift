@@ -25,7 +25,7 @@ final class NotesManagerWindowController {
             backing: .buffered,
             defer: false
         )
-        window.title = "Notes Manager"
+        window.title = "Sticky Markdown"
         window.contentView = hostingView
         window.minSize = NSSize(width: 400, height: 300)
         window.center()

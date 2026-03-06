@@ -9,7 +9,6 @@ struct NoteEditorView: View {
 
     @Environment(\.colorScheme) private var colorScheme
     @State private var content: String = ""
-    @State private var showingCloseConfirmation = false
 
     private var note: Note? {
         store.note(for: noteId)
@@ -22,7 +21,7 @@ struct NoteEditorView: View {
                 NoteTitleBar(
                     noteId: noteId,
                     store: store,
-                    onClose: { handleClose() },
+                    onClose: onClose,
                     onDelete: onDelete,
                     onToggleCollapse: { toggleCollapse() }
                 )
@@ -43,7 +42,7 @@ struct NoteEditorView: View {
                     material: .hudWindow,
                     blendingMode: .behindWindow,
                     tintColor: note.color.background(for: colorScheme).nsColor,
-                    tintOpacity: 0.87
+                    tintOpacity: 0.50
                 )
             )
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
@@ -57,29 +56,16 @@ struct NoteEditorView: View {
                 content = note.content
             }
             .onChange(of: content) { newValue in
-                store.updateContent(for: noteId, content: newValue)
+                Task {
+                    guard store.note(for: noteId)?.content != newValue else { return }
+                    store.updateContent(for: noteId, content: newValue)
+                }
             }
             .onChange(of: note.content) { newValue in
                 if content != newValue {
                     content = newValue
                 }
             }
-            .alert("Close Note?", isPresented: $showingCloseConfirmation) {
-                Button("Cancel", role: .cancel) { }
-                Button("Close", role: .destructive) {
-                    onClose()
-                }
-            } message: {
-                Text("This note has content. Are you sure you want to close it?")
-            }
-        }
-    }
-
-    private func handleClose() {
-        if let note = note, !note.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            showingCloseConfirmation = true
-        } else {
-            onClose()
         }
     }
 

@@ -11,6 +11,7 @@ struct Note: Codable, Identifiable, Equatable {
     var windowFrame: CGRect
     var createdAt: Date
     var modifiedAt: Date
+    var sortOrder: Int
 
     init(
         id: UUID = UUID(),
@@ -21,7 +22,8 @@ struct Note: Codable, Identifiable, Equatable {
         fontSize: CGFloat = 14,
         windowFrame: CGRect = CGRect(x: 100, y: 100, width: 220, height: 250),
         createdAt: Date = Date(),
-        modifiedAt: Date = Date()
+        modifiedAt: Date = Date(),
+        sortOrder: Int = 0
     ) {
         self.id = id
         self.content = content
@@ -32,6 +34,7 @@ struct Note: Codable, Identifiable, Equatable {
         self.windowFrame = windowFrame
         self.createdAt = createdAt
         self.modifiedAt = modifiedAt
+        self.sortOrder = sortOrder
     }
 
     var title: String {

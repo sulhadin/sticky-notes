@@ -11,7 +11,7 @@ struct VisualEffectView: NSViewRepresentable {
         material: NSVisualEffectView.Material = .hudWindow,
         blendingMode: NSVisualEffectView.BlendingMode = .behindWindow,
         tintColor: NSColor? = nil,
-        tintOpacity: CGFloat = 0.87
+        tintOpacity: CGFloat = 0.50
     ) {
         self.material = material
         self.blendingMode = blendingMode

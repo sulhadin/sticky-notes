@@ -31,7 +31,7 @@ struct PlainTextEditor: NSViewRepresentable {
         textView.delegate = context.coordinator
         textView.isEditable = true
         textView.isSelectable = true
-        textView.isRichText = false
+        textView.isRichText = true
         textView.importsGraphics = false
         textView.allowsUndo = true
         textView.usesFontPanel = false
@@ -56,33 +56,68 @@ struct PlainTextEditor: NSViewRepresentable {
         textView.textContainer?.containerSize = NSSize(width: scrollView.contentSize.width, height: CGFloat.greatestFiniteMagnitude)
         textView.textContainer?.widthTracksTextView = true
 
-        textView.font = font
-        textView.textColor = textColor
         textView.backgroundColor = .clear
-        textView.insertionPointColor = textColor
         textView.drawsBackground = false
-
+        textView.insertionPointColor = textColor
         textView.textContainerInset = NSSize(width: 12, height: 12)
 
+        // Set typing attributes (for newly typed text) — NOT textView.font/textColor
+        textView.typingAttributes = [
+            .font: font,
+            .foregroundColor: textColor
+        ]
+
         scrollView.documentView = textView
-        context.coordinator.textView = textView
+
+        let coordinator = context.coordinator
+        coordinator.textView = textView
+        coordinator.currentFont = font
+        coordinator.currentTextColor = textColor
+        coordinator.styler.baseFont = font
+        coordinator.styler.baseTextColor = textColor
+
+        // Set initial text and apply styles
+        if !text.isEmpty {
+            textView.string = text
+            coordinator.applyMarkdownStyling()
+        }
 
         return scrollView
     }
 
     func updateNSView(_ scrollView: NSScrollView, context: Context) {
         guard let textView = scrollView.documentView as? PlainTextView else { return }
+        let coordinator = context.coordinator
 
+        // Prevent re-entrant updates from our own textDidChange
+        guard !coordinator.isUpdatingBinding else { return }
+
+        // Check if font or color changed (user changed note settings)
+        let fontChanged = coordinator.currentFont != font
+        let colorChanged = coordinator.currentTextColor != textColor
+
+        if fontChanged || colorChanged {
+            coordinator.currentFont = font
+            coordinator.currentTextColor = textColor
+            coordinator.styler.baseFont = font
+            coordinator.styler.baseTextColor = textColor
+            textView.insertionPointColor = textColor
+            textView.typingAttributes = [
+                .font: font,
+                .foregroundColor: textColor
+            ]
+            // Re-apply styles with new font/color
+            coordinator.applyMarkdownStyling()
+        }
+
+        // Only set text if it genuinely changed from an external source
+        // (e.g. CloudKit sync, undo from NoteStore, etc.)
         if textView.string != text {
             let selectedRanges = textView.selectedRanges
             textView.string = text
             textView.selectedRanges = selectedRanges
+            coordinator.applyMarkdownStyling()
         }
-
-        textView.font = font
-        textView.textColor = textColor
-        textView.backgroundColor = .clear
-        textView.insertionPointColor = textColor
     }
 
     func makeCoordinator() -> Coordinator {
@@ -92,6 +127,10 @@ struct PlainTextEditor: NSViewRepresentable {
     class Coordinator: NSObject, NSTextViewDelegate {
         var text: Binding<String>
         weak var textView: PlainTextView?
+        let styler = MarkdownStyler()
+        var isUpdatingBinding = false
+        var currentFont: NSFont = .systemFont(ofSize: 14)
+        var currentTextColor: NSColor = .black
 
         init(text: Binding<String>) {
             self.text = text
@@ -99,7 +138,36 @@ struct PlainTextEditor: NSViewRepresentable {
 
         func textDidChange(_ notification: Notification) {
             guard let textView = notification.object as? NSTextView else { return }
+
+            // Update the SwiftUI binding, but flag to prevent re-entrant updateNSView
+            isUpdatingBinding = true
             text.wrappedValue = textView.string
+            isUpdatingBinding = false
+
+            // Apply markdown styling synchronously
+            applyMarkdownStyling()
+        }
+
+        func applyMarkdownStyling() {
+            guard let textView = textView,
+                  let textStorage = textView.textStorage else { return }
+
+            let selectedRanges = textView.selectedRanges
+            let clipView = textView.enclosingScrollView?.contentView
+            let savedOrigin = clipView?.bounds.origin
+
+            textStorage.beginEditing()
+            styler.applyStyles(to: textStorage)
+            textStorage.endEditing()
+
+            textView.selectedRanges = selectedRanges
+
+            // Restore scroll position to prevent jumping from font size changes,
+            // then ensure the cursor remains visible.
+            if let origin = savedOrigin {
+                clipView?.setBoundsOrigin(origin)
+            }
+            textView.scrollRangeToVisible(textView.selectedRange())
         }
     }
 }

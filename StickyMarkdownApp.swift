@@ -9,7 +9,7 @@ struct StickyMarkdownApp: App {
         MenuBarExtra {
             MenuBarView(store: store)
         } label: {
-            Image(systemName: "note.text")
+            Image(systemName: "square.stack")
         }
         .menuBarExtraStyle(.window)
     }

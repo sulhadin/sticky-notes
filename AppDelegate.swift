@@ -6,14 +6,35 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private let windowManager = WindowManager.shared
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        // Restore windows from previous session, or create first note if none exist
+        // Restore all note windows (seed notes are created in NoteStore.init if needed)
         Task { @MainActor in
-            if store.notes.isEmpty {
-                // Create a welcome note for first launch
-                windowManager.createAndOpenNewNote(color: .silver)
-            } else {
-                windowManager.restoreWindows()
+            windowManager.restoreWindows()
+        }
+
+        registerGlobalHotkey()
+    }
+
+    private func registerGlobalHotkey() {
+        let hotKeyFlags: NSEvent.ModifierFlags = [.control, .option]
+
+        // Global monitor — fires when another app is frontmost
+        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
+            guard event.modifierFlags.intersection(.deviceIndependentFlagsMask) == hotKeyFlags,
+                  event.charactersIgnoringModifiers == "n" else { return }
+            Task { @MainActor in
+                NSApplication.shared.activate(ignoringOtherApps: true)
+                self?.windowManager.createAndOpenNewNote()
             }
+        }
+
+        // Local monitor — fires when this app is frontmost
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] event in
+            guard event.modifierFlags.intersection(.deviceIndependentFlagsMask) == hotKeyFlags,
+                  event.charactersIgnoringModifiers == "n" else { return event }
+            Task { @MainActor in
+                self?.windowManager.createAndOpenNewNote()
+            }
+            return nil
         }
     }
 

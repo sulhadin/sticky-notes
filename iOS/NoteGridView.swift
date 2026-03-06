@@ -4,10 +4,29 @@ struct NoteGridView: View {
     @ObservedObject var store: NoteStore
     @State private var selectedNote: Note?
     @State private var showingSettings = false
+    @State private var selectedColors: Set<NoteColor> = []
+    @State private var searchText: String = ""
 
     private let columns = [
         GridItem(.adaptive(minimum: 160, maximum: 200), spacing: 12)
     ]
+
+    private var filteredNotes: [Note] {
+        var result = store.notes.sorted { lhs, rhs in
+            if lhs.isPinned != rhs.isPinned {
+                return lhs.isPinned
+            }
+            return lhs.modifiedAt > rhs.modifiedAt
+        }
+        if !selectedColors.isEmpty {
+            result = result.filter { selectedColors.contains($0.color) }
+        }
+        if !searchText.isEmpty {
+            let query = searchText.lowercased()
+            result = result.filter { $0.content.lowercased().contains(query) }
+        }
+        return result
+    }
 
     var body: some View {
         NavigationStack {
@@ -15,32 +34,42 @@ struct NoteGridView: View {
                 if store.notes.isEmpty {
                     emptyState
                 } else {
-                    LazyVGrid(columns: columns, spacing: 12) {
-                        ForEach(store.notes.sorted(by: { $0.modifiedAt > $1.modifiedAt })) { note in
-                            NoteCardView(note: note)
-                                .onTapGesture {
-                                    selectedNote = note
-                                }
-                                .contextMenu {
-                                    colorMenu(for: note)
-                                    Divider()
-                                    Button(note.isPinned ? "Unpin" : "Pin to Top") {
-                                        store.togglePinned(for: note.id)
+                    VStack(spacing: 8) {
+                        // Color filter bar
+                        colorFilterBar
+                            .padding(.horizontal)
+
+                        LazyVGrid(columns: columns, spacing: 12) {
+                            ForEach(filteredNotes) { note in
+                                NoteCardView(note: note, searchText: searchText)
+                                    .onTapGesture {
+                                        selectedNote = note
                                     }
-                                    Divider()
-                                    Button("Delete", role: .destructive) {
-                                        withAnimation {
-                                            store.deleteNote(id: note.id)
+                                    .contextMenu {
+                                        colorMenu(for: note)
+                                        Divider()
+                                        Button(note.isPinned ? "Unpin" : "Pin to Top") {
+                                            store.togglePinned(for: note.id)
+                                        }
+                                        Divider()
+                                        ShareLink(item: note.content, subject: Text(note.title))
+                                        Divider()
+                                        Button("Delete", role: .destructive) {
+                                            withAnimation {
+                                                store.deleteNote(id: note.id)
+                                            }
                                         }
                                     }
-                                }
+                            }
                         }
+                        .padding(.horizontal)
                     }
-                    .padding()
+                    .padding(.top, 4)
                 }
             }
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Sticky Markdown")
+            .searchable(text: $searchText, prompt: "Search notes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
@@ -64,6 +93,41 @@ struct NoteGridView: View {
             .sheet(isPresented: $showingSettings) {
                 iOS_SettingsView()
             }
+        }
+    }
+
+    private var colorFilterBar: some View {
+        HStack(spacing: 8) {
+            ForEach(NoteColor.allCases) { color in
+                Button {
+                    if selectedColors.contains(color) {
+                        selectedColors.remove(color)
+                    } else {
+                        selectedColors.insert(color)
+                    }
+                } label: {
+                    Circle()
+                        .fill(color.backgroundColor)
+                        .frame(width: 20, height: 20)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.primary.opacity(0.2), lineWidth: 0.5)
+                        )
+                        .overlay(
+                            selectedColors.contains(color)
+                                ? Circle().stroke(Color.accentColor, lineWidth: 2.5)
+                                : nil
+                        )
+                }
+            }
+            if !selectedColors.isEmpty {
+                Button("Clear") {
+                    selectedColors.removeAll()
+                }
+                .font(.caption)
+                .foregroundColor(.secondary)
+            }
+            Spacer()
         }
     }
 

@@ -19,12 +19,11 @@ struct NoteEditView: View {
                     note.color.background(for: colorScheme)
                         .ignoresSafeArea()
 
-                    TextEditor(text: $content)
-                        .font(.system(size: note.fontSize))
-                        .foregroundColor(note.color.text(for: colorScheme))
-                        .scrollContentBackground(.hidden)
-                        .focused($isEditorFocused)
-                        .padding(.horizontal, 4)
+                    MarkdownTextEditor(
+                        text: $content,
+                        textColor: UIColor(note.color.text(for: colorScheme)),
+                        font: .systemFont(ofSize: note.fontSize)
+                    )
                 }
                 .navigationTitle(note.title)
                 .navigationBarTitleDisplayMode(.inline)
@@ -86,6 +85,10 @@ struct NoteEditView: View {
                 }
             }
         }
+
+        Divider()
+
+        ShareLink(item: note.content, subject: Text(note.title))
 
         Divider()
 

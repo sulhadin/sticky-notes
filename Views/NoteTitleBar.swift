@@ -143,6 +143,23 @@ struct NoteTitleBar: View {
             }
         }
 
+        // Export
+        Menu("Export") {
+            Button("As Plain Text (.txt)") {
+                NoteExporter.export(note, format: .txt)
+            }
+            Button("As Markdown (.md)") {
+                NoteExporter.export(note, format: .md)
+            }
+        }
+
+        // Share
+        Button("Share...") {
+            if let window = NSApp.keyWindow, let contentView = window.contentView {
+                NoteExporter.share(note, from: contentView)
+            }
+        }
+
         Divider()
 
         // Collapse toggle

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ManagerNoteCardView: View {
     let note: Note
+    var searchText: String = ""
     @Environment(\.colorScheme) private var colorScheme
     @State private var isHovered = false
 
@@ -24,7 +25,7 @@ struct ManagerNoteCardView: View {
                     .foregroundColor(note.color.text(for: colorScheme).opacity(0.4))
                     .italic()
             } else {
-                Text(note.content)
+                highlightedText(note.content, search: searchText)
                     .font(.system(size: min(note.fontSize, 14)))
                     .foregroundColor(note.color.text(for: colorScheme))
                     .lineLimit(8)
@@ -60,5 +61,30 @@ struct ManagerNoteCardView: View {
         .onHover { hovering in
             isHovered = hovering
         }
+    }
+
+    private func highlightedText(_ content: String, search: String) -> Text {
+        guard !search.isEmpty else {
+            return Text(content)
+        }
+        let lowered = content.lowercased()
+        let query = search.lowercased()
+        var result = Text("")
+        var currentIndex = lowered.startIndex
+
+        while let range = lowered.range(of: query, range: currentIndex..<lowered.endIndex) {
+            if currentIndex < range.lowerBound {
+                result = result + Text(content[currentIndex..<range.lowerBound])
+            }
+            result = result + Text(content[range])
+                .bold()
+                .underline()
+                .foregroundColor(Color.yellow)
+            currentIndex = range.upperBound
+        }
+        if currentIndex < lowered.endIndex {
+            result = result + Text(content[currentIndex..<lowered.endIndex])
+        }
+        return result
     }
 }

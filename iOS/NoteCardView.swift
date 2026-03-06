@@ -2,6 +2,7 @@ import SwiftUI
 
 struct NoteCardView: View {
     let note: Note
+    var searchText: String = ""
     @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
@@ -23,7 +24,7 @@ struct NoteCardView: View {
                     .foregroundColor(note.color.text(for: colorScheme).opacity(0.4))
                     .italic()
             } else {
-                Text(note.content)
+                highlightedText(note.content, search: searchText)
                     .font(.system(size: min(note.fontSize, 16)))
                     .foregroundColor(note.color.text(for: colorScheme))
                     .lineLimit(8)
@@ -49,5 +50,30 @@ struct NoteCardView: View {
                 .stroke(note.color.border(for: colorScheme), lineWidth: 0.5)
         )
         .shadow(color: Color.black.opacity(0.08), radius: 4, x: 0, y: 2)
+    }
+
+    private func highlightedText(_ content: String, search: String) -> Text {
+        guard !search.isEmpty else {
+            return Text(content)
+        }
+        let lowered = content.lowercased()
+        let query = search.lowercased()
+        var result = Text("")
+        var currentIndex = lowered.startIndex
+
+        while let range = lowered.range(of: query, range: currentIndex..<lowered.endIndex) {
+            if currentIndex < range.lowerBound {
+                result = result + Text(content[currentIndex..<range.lowerBound])
+            }
+            result = result + Text(content[range])
+                .bold()
+                .underline()
+                .foregroundColor(Color.yellow)
+            currentIndex = range.upperBound
+        }
+        if currentIndex < lowered.endIndex {
+            result = result + Text(content[currentIndex..<lowered.endIndex])
+        }
+        return result
     }
 }
