@@ -11,79 +11,73 @@
       <stop offset="100%" stop-color="#0C0C16"/>
     </linearGradient>
 
-    <!-- Ambient glow - soft silver/blue -->
-    <radialGradient id="ambientGlow" cx="0.48" cy="0.46" r="0.42">
-      <stop offset="0%" stop-color="#C7D8F5" stop-opacity="0.10"/>
-      <stop offset="60%" stop-color="#E3E4E6" stop-opacity="0.04"/>
+    <!-- Ambient glow - warm, centered on front note -->
+    <radialGradient id="ambientGlow" cx="0.48" cy="0.46" r="0.45">
+      <stop offset="0%" stop-color="#F5D6BA" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#E3C8A8" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- ===== NOTE COLOR GRADIENTS (matching app) ===== -->
+    <!-- ===== NOTE COLOR GRADIENTS ===== -->
 
-    <!-- Back note: Purple #E2D1F5 -->
+    <!-- Back note: Purple -->
     <linearGradient id="purpleNote" x1="0" y1="0" x2="0.2" y2="1">
       <stop offset="0%" stop-color="#EADCF8"/>
       <stop offset="100%" stop-color="#D5C0EC"/>
     </linearGradient>
 
-    <!-- Middle note: Blue #C7D8F5 -->
+    <!-- Middle note: Blue -->
     <linearGradient id="blueNote" x1="0" y1="0" x2="0.2" y2="1">
       <stop offset="0%" stop-color="#D4E2F8"/>
       <stop offset="100%" stop-color="#B8CCF0"/>
     </linearGradient>
 
-    <!-- Front note: Silver #E3E4E6 -->
-    <linearGradient id="silverNote" x1="0" y1="0" x2="0.15" y2="1">
-      <stop offset="0%" stop-color="#F0F0F2"/>
-      <stop offset="40%" stop-color="#E3E4E6"/>
-      <stop offset="100%" stop-color="#D0D1D4"/>
+    <!-- Front note: Warm Gold -->
+    <linearGradient id="goldNote" x1="0.1" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#FBE8D0"/>
+      <stop offset="35%" stop-color="#F5D6BA"/>
+      <stop offset="100%" stop-color="#E8C4A0"/>
     </linearGradient>
 
-    <!-- Fold gradient - slightly darker silver -->
+    <!-- Fold gradient - darker gold -->
     <linearGradient id="foldFront" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#CDCED2"/>
-      <stop offset="100%" stop-color="#B8B9BE"/>
+      <stop offset="0%" stop-color="#E0BF9A"/>
+      <stop offset="100%" stop-color="#D0A878"/>
     </linearGradient>
 
     <linearGradient id="foldUnder" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#AAABB0"/>
-      <stop offset="100%" stop-color="#9A9BA0"/>
+      <stop offset="0%" stop-color="#C89868"/>
+      <stop offset="100%" stop-color="#B88858"/>
     </linearGradient>
 
-    <!-- Fold cast shadow on note -->
+    <!-- Fold cast shadow -->
     <linearGradient id="foldCastShadow" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
 
     <!-- Sheen overlay -->
-    <linearGradient id="noteSheen" x1="0.2" y1="0" x2="0.8" y2="0.6">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.50"/>
-      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <linearGradient id="noteSheen" x1="0.15" y1="0" x2="0.7" y2="0.5">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Front note text lines - bolder for small sizes -->
-    <linearGradient id="lineGray" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7A7B82" stop-opacity="0.65"/>
-      <stop offset="75%" stop-color="#9A9BA0" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#9A9BA0" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Markdown hash color -->
-    <linearGradient id="hashColor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#6E6F78"/>
-      <stop offset="100%" stop-color="#8A8B92"/>
+    <!-- Gold note text lines -->
+    <linearGradient id="lineGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B7050" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#A08060" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#A08060" stop-opacity="0"/>
     </linearGradient>
 
     <!-- Back note text lines -->
     <linearGradient id="linePurple" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#9070B8" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#9070B8" stop-opacity="0.50"/>
       <stop offset="100%" stop-color="#A888C8" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="lineBlue" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#6088C0" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#6088C0" stop-opacity="0.50"/>
       <stop offset="100%" stop-color="#7A9CCE" stop-opacity="0"/>
     </linearGradient>
 
@@ -103,7 +97,7 @@
     </radialGradient>
 
     <radialGradient id="pinShadow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.25"/>
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
@@ -115,7 +109,7 @@
       <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#000000" flood-opacity="0.38"/>
     </filter>
     <filter id="frontNoteShadow" x="-10%" y="-5%" width="125%" height="130%">
-      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000000" flood-opacity="0.50"/>
     </filter>
 
     <!-- Vignette -->
@@ -141,43 +135,40 @@
     <!-- ===== BACK NOTE - Purple (rotated right) ===== -->
     <g filter="url(#backNoteShadow)">
       <g transform="rotate(8, 512, 480)">
-        <rect x="240" y="210" width="544" height="590" rx="4" fill="url(#purpleNote)"/>
-        <path d="M 240 210 L 784 210 L 784 800 L 240 800 Z"
-              fill="url(#noteSheen)" opacity="0.5"/>
-        <!-- Purple note text lines -->
-        <rect x="305" y="330" width="300" height="12" rx="6" fill="url(#linePurple)"/>
-        <rect x="305" y="390" width="240" height="12" rx="6" fill="url(#linePurple)"/>
-        <rect x="305" y="450" width="280" height="12" rx="6" fill="url(#linePurple)"/>
+        <rect x="240" y="210" width="544" height="590" rx="6" fill="url(#purpleNote)"/>
+        <rect x="240" y="210" width="544" height="590" rx="6" fill="url(#noteSheen)" opacity="0.5"/>
+        <rect x="310" y="340" width="280" height="14" rx="7" fill="url(#linePurple)"/>
+        <rect x="310" y="400" width="220" height="14" rx="7" fill="url(#linePurple)"/>
+        <rect x="310" y="460" width="260" height="14" rx="7" fill="url(#linePurple)"/>
       </g>
     </g>
 
     <!-- ===== MIDDLE NOTE - Blue (rotated left) ===== -->
     <g filter="url(#midNoteShadow)">
       <g transform="rotate(-5, 512, 480)">
-        <rect x="230" y="200" width="564" height="610" rx="4" fill="url(#blueNote)"/>
-        <rect x="230" y="200" width="564" height="610" rx="4" fill="url(#noteSheen)" opacity="0.4"/>
-        <!-- Blue note text lines -->
-        <rect x="300" y="325" width="340" height="12" rx="6" fill="url(#lineBlue)"/>
-        <rect x="300" y="385" width="260" height="12" rx="6" fill="url(#lineBlue)"/>
-        <rect x="300" y="445" width="310" height="12" rx="6" fill="url(#lineBlue)"/>
-        <rect x="300" y="505" width="200" height="12" rx="6" fill="url(#lineBlue)"/>
+        <rect x="230" y="200" width="564" height="610" rx="6" fill="url(#blueNote)"/>
+        <rect x="230" y="200" width="564" height="610" rx="6" fill="url(#noteSheen)" opacity="0.4"/>
+        <rect x="305" y="330" width="320" height="14" rx="7" fill="url(#lineBlue)"/>
+        <rect x="305" y="390" width="240" height="14" rx="7" fill="url(#lineBlue)"/>
+        <rect x="305" y="450" width="290" height="14" rx="7" fill="url(#lineBlue)"/>
+        <rect x="305" y="510" width="180" height="14" rx="7" fill="url(#lineBlue)"/>
       </g>
     </g>
 
-    <!-- ===== FRONT NOTE - Silver (main, slight tilt) ===== -->
+    <!-- ===== FRONT NOTE - Gold (main, slight tilt) ===== -->
     <g filter="url(#frontNoteShadow)">
       <g transform="rotate(-1.5, 512, 490)">
         <!-- Note body with fold cutout -->
         <path d="M 220 185 L 804 185 L 804 660 L 645 830 L 220 830 Z"
-              fill="url(#silverNote)"/>
+              fill="url(#goldNote)"/>
 
         <!-- Top/left edge highlight -->
         <path d="M 220 830 L 220 185 L 804 185"
-              fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.5"/>
+              fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-opacity="0.45"/>
 
         <!-- Bottom/right edge shadow -->
         <path d="M 804 185 L 804 660 L 645 830 L 220 830"
-              fill="none" stroke="#000000" stroke-width="0.8" stroke-opacity="0.08"/>
+              fill="none" stroke="#000000" stroke-width="1" stroke-opacity="0.10"/>
 
         <!-- Sheen -->
         <path d="M 220 185 L 804 185 L 804 660 L 645 830 L 220 830 Z"
@@ -196,68 +187,52 @@
               fill="url(#foldFront)"/>
 
         <!-- Fold highlight -->
-        <line x1="645" y1="660" x2="712" y2="730" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.35"/>
+        <line x1="645" y1="660" x2="712" y2="730" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.35"/>
 
         <!-- Fold creases -->
-        <line x1="645" y1="660" x2="645" y2="830" stroke="#A0A0A8" stroke-width="0.8" stroke-opacity="0.3"/>
-        <line x1="645" y1="660" x2="804" y2="660" stroke="#A0A0A8" stroke-width="0.8" stroke-opacity="0.2"/>
+        <line x1="645" y1="660" x2="645" y2="830" stroke="#A08060" stroke-width="0.8" stroke-opacity="0.3"/>
+        <line x1="645" y1="660" x2="804" y2="660" stroke="#A08060" stroke-width="0.8" stroke-opacity="0.2"/>
 
-        <!-- ===== MARKDOWN CONTENT ===== -->
-
-        <!-- Heading: "# " hash mark + bold line -->
-        <text x="280" y="322" font-family="-apple-system, SF Pro, Helvetica Neue, sans-serif" font-size="42" font-weight="700" fill="url(#hashColor)" opacity="0.5">#</text>
-        <rect x="322" y="300" width="280" height="15" rx="7.5" fill="url(#lineGray)"/>
-
-        <!-- Body text lines - bolder -->
-        <rect x="290" y="375" width="340" height="13" rx="6.5" fill="url(#lineGray)"/>
-        <rect x="290" y="435" width="260" height="13" rx="6.5" fill="url(#lineGray)"/>
-
-        <!-- Bold markers: "**" + thicker line + "**" -->
-        <text x="280" y="512" font-family="-apple-system, SF Pro, Helvetica Neue, sans-serif" font-size="30" font-weight="800" fill="#7A7B82" opacity="0.35">**</text>
-        <rect x="325" y="494" width="180" height="14" rx="7" fill="#7A7B82" opacity="0.45"/>
-        <text x="510" y="512" font-family="-apple-system, SF Pro, Helvetica Neue, sans-serif" font-size="30" font-weight="800" fill="#7A7B82" opacity="0.35">**</text>
-
-        <!-- More body lines -->
-        <rect x="290" y="558" width="310" height="13" rx="6.5" fill="url(#lineGray)"/>
-        <rect x="290" y="618" width="200" height="13" rx="6.5" fill="url(#lineGray)"/>
-
-        <!-- List bullet hints -->
-        <circle cx="298" cy="685" r="6" fill="#7A7B82" opacity="0.4"/>
-        <rect x="318" y="679" width="220" height="12" rx="6" fill="url(#lineGray)"/>
-        <circle cx="298" cy="725" r="6" fill="#7A7B82" opacity="0.4"/>
-        <rect x="318" y="719" width="170" height="12" rx="6" fill="url(#lineGray)"/>
+        <!-- Clean, bold text lines - visible at any size -->
+        <rect x="290" y="310" width="360" height="16" rx="8" fill="url(#lineGold)"/>
+        <rect x="290" y="380" width="280" height="14" rx="7" fill="url(#lineGold)"/>
+        <rect x="290" y="440" width="320" height="14" rx="7" fill="url(#lineGold)"/>
+        <rect x="290" y="500" width="230" height="14" rx="7" fill="url(#lineGold)"/>
+        <rect x="290" y="560" width="300" height="14" rx="7" fill="url(#lineGold)"/>
+        <rect x="290" y="620" width="200" height="14" rx="7" fill="url(#lineGold)"/>
+        <rect x="290" y="680" width="260" height="14" rx="7" fill="url(#lineGold)"/>
 
         <!-- ===== METALLIC PIN ===== -->
-        <ellipse cx="510" cy="218" rx="18" ry="6" fill="url(#pinShadow)"/>
-        <line x1="504" y1="152" x2="508" y2="208" stroke="#808088" stroke-width="2.2" stroke-linecap="round"/>
-        <line x1="504" y1="152" x2="508" y2="208" stroke="#B0B0B8" stroke-width="1.2" stroke-linecap="round"/>
-        <circle cx="504" cy="138" r="28" fill="url(#pinGrad)" stroke="#A0A0A8" stroke-width="1"/>
-        <circle cx="504" cy="138" r="20" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-opacity="0.2"/>
-        <circle cx="504" cy="138" r="28" fill="url(#pinHighlight)"/>
-        <circle cx="495" cy="129" r="4.5" fill="white" opacity="0.65"/>
+        <ellipse cx="510" cy="220" rx="20" ry="7" fill="url(#pinShadow)"/>
+        <line x1="504" y1="148" x2="508" y2="210" stroke="#808088" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="504" y1="148" x2="508" y2="210" stroke="#B0B0B8" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="504" cy="132" r="32" fill="url(#pinGrad)" stroke="#A0A0A8" stroke-width="1"/>
+        <circle cx="504" cy="132" r="22" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-opacity="0.2"/>
+        <circle cx="504" cy="132" r="32" fill="url(#pinHighlight)"/>
+        <circle cx="494" cy="122" r="5" fill="white" opacity="0.65"/>
       </g>
     </g>
 
     <!-- ===== COLOR PALETTE DOTS (bottom) ===== -->
     <g transform="translate(512, 920)">
       <!-- Silver -->
-      <circle cx="-100" cy="0" r="14" fill="#E3E4E6" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="-100" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="-100" cy="0" r="15" fill="#E3E4E6" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="-100" cy="0" r="15" fill="url(#dotHighlight)"/>
       <!-- Space Gray -->
-      <circle cx="-60" cy="0" r="14" fill="#B8B8BD" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="-60" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="-60" cy="0" r="15" fill="#B8B8BD" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="-60" cy="0" r="15" fill="url(#dotHighlight)"/>
       <!-- Gold -->
-      <circle cx="-20" cy="0" r="14" fill="#F5D6BA" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="-20" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="-20" cy="0" r="15" fill="#F5D6BA" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="-20" cy="0" r="15" fill="url(#dotHighlight)"/>
       <!-- Rose Gold -->
-      <circle cx="20" cy="0" r="14" fill="#F2C6C1" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="20" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="20" cy="0" r="15" fill="#F2C6C1" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="20" cy="0" r="15" fill="url(#dotHighlight)"/>
       <!-- Blue -->
-      <circle cx="60" cy="0" r="14" fill="#C7D8F5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="60" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="60" cy="0" r="15" fill="#C7D8F5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="60" cy="0" r="15" fill="url(#dotHighlight)"/>
       <!-- Purple -->
-      <circle cx="100" cy="0" r="14" fill="#E2D1F5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
-      <circle cx="100" cy="0" r="14" fill="url(#dotHighlight)"/>
+      <circle cx="100" cy="0" r="15" fill="#E2D1F5" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="100" cy="0" r="15" fill="url(#dotHighlight)"/>
     </g>
 
     <!-- Vignette -->
