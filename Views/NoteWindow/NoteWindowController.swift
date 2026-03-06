@@ -90,8 +90,10 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
 
         let targetFrame: NSRect
         if isCollapsed {
-            // Save current height before collapsing
-            expandedHeight = currentFrame.height
+            // Only save current height if the window is actually expanded
+            if currentFrame.height > handleHeight {
+                expandedHeight = currentFrame.height
+            }
             targetFrame = NSRect(
                 x: currentFrame.origin.x,
                 y: currentFrame.maxY - handleHeight,

@@ -23,9 +23,8 @@ final class NotePanel: NSPanel {
         hidesOnDeactivate = false
         animationBehavior = .utilityWindow
 
-        // Normal window behavior by default - goes behind other windows
         collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
-        level = .normal
+        level = .floating
 
         minSize = NSSize(width: 150, height: 24)  // Allow collapsed height
         maxSize = NSSize(width: 500, height: 800)
@@ -40,12 +39,12 @@ final class NotePanel: NSPanel {
 
     func updateFloatingLevel(isPinned: Bool) {
         if isPinned {
-            level = .floating
+            level = .statusBar
             isFloatingPanel = true
             collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary]
         } else {
-            level = .normal
-            isFloatingPanel = false
+            level = .floating
+            isFloatingPanel = true
             collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         }
     }

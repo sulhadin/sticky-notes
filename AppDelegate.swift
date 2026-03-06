@@ -6,9 +6,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private let windowManager = WindowManager.shared
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        // Restore all note windows (seed notes are created in NoteStore.init if needed)
+        // Show the manager window on launch — notes are opened individually from there
         Task { @MainActor in
-            windowManager.restoreWindows()
+            NotesManagerWindowController.shared.showManager()
         }
 
         registerGlobalHotkey()
