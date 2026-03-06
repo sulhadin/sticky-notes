@@ -47,10 +47,10 @@
 		D1000003226AAAAA /* NotesManagerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000003226AAAA1 /* NotesManagerWindowController.swift */; };
 		E1000001226AAAAA /* MarkdownStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000001226AAAA1 /* MarkdownStyler.swift */; };
 		E1000002226AAAAA /* NoteExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000002226AAAA1 /* NoteExporter.swift */; };
-		G1000001226AAAAA /* StickyNoteIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000001226AAAA1 /* StickyNoteIntents.swift */; };
 		E1000003226AAAAA /* MarkdownTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1000003226AAAA1 /* MarkdownTextEditor.swift */; };
 		F1000001226AAAAA /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = F1000002226AAAA1 /* Markdown */; };
 		F1000002226AAAAA /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = F1000003226AAAA1 /* Markdown */; };
+		G1000001226AAAAA /* StickyNoteIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = G1000001226AAAA1 /* StickyNoteIntents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +91,8 @@
 		D1000003226AAAA1 /* NotesManagerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManagerWindowController.swift; sourceTree = "<group>"; };
 		E1000001226AAAA1 /* MarkdownStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStyler.swift; sourceTree = "<group>"; };
 		E1000002226AAAA1 /* NoteExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteExporter.swift; sourceTree = "<group>"; };
-		G1000001226AAAA1 /* StickyNoteIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteIntents.swift; sourceTree = "<group>"; };
 		E1000003226AAAA1 /* MarkdownTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextEditor.swift; sourceTree = "<group>"; };
+		G1000001226AAAA1 /* StickyNoteIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteIntents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,7 +400,7 @@
 				CODE_SIGN_ENTITLEMENTS = StickyMarkdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -429,7 +429,7 @@
 				CODE_SIGN_ENTITLEMENTS = StickyMarkdown.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -576,7 +576,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "iOS/StickyMarkdown-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "iOS/Info-iOS.plist";
@@ -612,7 +612,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "iOS/StickyMarkdown-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G823YRG96P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "iOS/Info-iOS.plist";

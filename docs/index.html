@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Markdown — Beautiful Markdown Notes</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            background: #0C0C16;
+            color: #F5F5F7;
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 24px 60px;
+            background: linear-gradient(180deg, #1C1C2A 0%, #0C0C16 100%);
+        }
+
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #F5D6BA;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #A0A0B0;
+            max-width: 600px;
+            margin: 0 auto 36px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badges a img {
+            height: 50px;
+        }
+
+        .features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 48px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #F5D6BA;
+        }
+
+        .feature p {
+            font-size: 15px;
+            color: #A0A0B0;
+        }
+
+        .colors-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .color-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .section p, .section li {
+            font-size: 16px;
+            color: #A0A0B0;
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li::before {
+            content: "—  ";
+            color: #F5D6BA;
+        }
+
+        .section a {
+            color: #F5D6BA;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: rgba(245, 214, 186, 0.2);
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 14px;
+            color: #606070;
+        }
+
+        footer a {
+            color: #808090;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 17px; }
+            .features h2 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Sticky <span>Markdown</span></h1>
+        <p>Beautiful sticky notes with live Markdown styling. Color-coded, synced with iCloud, and always at your fingertips.</p>
+
+        <div class="colors-row">
+            <div class="color-dot" style="background: #E3E4E6;"></div>
+            <div class="color-dot" style="background: #9A9BA0;"></div>
+            <div class="color-dot" style="background: #F5D6BA;"></div>
+            <div class="color-dot" style="background: #F2C6C1;"></div>
+            <div class="color-dot" style="background: #B8CCF0;"></div>
+            <div class="color-dot" style="background: #D5C0EC;"></div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Everything you need, nothing you don't</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Live Markdown</h3>
+                <p>Headings, bold, italic, lists, code blocks, links — styled instantly as you type. No preview mode needed.</p>
+            </div>
+            <div class="feature">
+                <h3>6 Premium Colors</h3>
+                <p>Silver, Space Gray, Gold, Rose Gold, Blue, and Purple. Organize your notes by color at a glance.</p>
+            </div>
+            <div class="feature">
+                <h3>Desktop Stickies</h3>
+                <p>Floating notes on your Mac desktop. Pin them on top, collapse to save space, drag anywhere.</p>
+            </div>
+            <div class="feature">
+                <h3>Menu Bar Access</h3>
+                <p>Create, browse, and jump to notes from the menu bar. Global hotkey (Ctrl+Option+N) for instant access.</p>
+            </div>
+            <div class="feature">
+                <h3>iCloud Sync</h3>
+                <p>Write on your Mac, read on your iPhone. All notes sync automatically across your devices.</p>
+            </div>
+            <div class="feature">
+                <h3>Export & Share</h3>
+                <p>Export notes as plain text or Markdown files. Share directly from any note.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="support">
+        <h2>Support</h2>
+        <p>Having an issue or need help? We're here for you.</p>
+        <ul>
+            <li>Report bugs or request features on <a href="https://github.com/sulhadin/sticky-notes/issues">GitHub Issues</a></li>
+            <li>Email us at <a href="mailto:sulhadin@gmail.com">sulhadin@gmail.com</a></li>
+        </ul>
+        <p>We typically respond within 48 hours.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p><strong>Last updated: March 7, 2026</strong></p>
+
+        <p>Sticky Markdown is designed with your privacy in mind. Here's what you need to know:</p>
+
+        <p><strong>Data Collection</strong><br>
+        Sticky Markdown does not collect, store, or transmit any personal data. Your notes are yours alone.</p>
+
+        <p><strong>iCloud Sync</strong><br>
+        If you use iCloud, your notes are synced through Apple's CloudKit infrastructure. This data is stored in your private iCloud account and is not accessible to us or any third party. Apple's iCloud is protected by Apple's privacy policy.</p>
+
+        <p><strong>Analytics</strong><br>
+        Sticky Markdown does not include any third-party analytics, tracking, or advertising frameworks. We do not track how you use the app.</p>
+
+        <p><strong>Local Storage</strong><br>
+        All note data is stored locally on your device using Core Data. If iCloud is enabled, this data is also synced to your private iCloud container.</p>
+
+        <p><strong>Third-Party Services</strong><br>
+        Sticky Markdown does not integrate with any third-party services. No data leaves your device except through Apple's iCloud sync.</p>
+
+        <p><strong>Children's Privacy</strong><br>
+        Sticky Markdown does not knowingly collect any information from children. The app does not require any personal information to function.</p>
+
+        <p><strong>Changes to This Policy</strong><br>
+        If we update this privacy policy, changes will be posted on this page with an updated date.</p>
+
+        <p><strong>Contact</strong><br>
+        If you have questions about this privacy policy, contact us at <a href="mailto:sulhadin@gmail.com">sulhadin@gmail.com</a>.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <footer>
+        <p>&copy; 2026 Sulhadin. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+            <a href="#privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+            <a href="#support">Support</a> &nbsp;&middot;&nbsp;
+            <a href="https://github.com/sulhadin/sticky-notes">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
